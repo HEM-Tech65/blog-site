@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}New Post{% endblock %}
+
+{% block content %}
+    <section class="container mt-5">
+        <h1 class="head text-center">New Post</h1>
+        
+        <form class="form-with-validation card p-4 shadow-lg" action="{% url 'posts:new-post' %}" 
+              method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                {{ form|crispy }}
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit w-100">Add Post</button>
+        </form>
+    </section>
+{% endblock %}

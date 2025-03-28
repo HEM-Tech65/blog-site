@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+{% block title %}User Login - My Blog{% endblock %}
+
+{% block content %}
+<section class="container d-flex justify-content-center align-items-center" style="min-height: 70vh;">
+    <div class="col-md-6">
+        <div class="card shadow-lg border-0 p-4">
+            <div class="card-body">
+                <h2 class="text-center mb-4">Login to Your Account</h2>
+
+                {% if form.errors %}
+                    <div class="alert alert-danger">
+                        <strong>Invalid credentials!</strong> Please check your username and password.
+                    </div>
+                {% endif %}
+
+                <form action="{% url 'users:login' %}" method="post" class="needs-validation" novalidate>
+                    {% csrf_token %}
+                    
+                    <div class="mb-3">
+                        <label for="id_username" class="form-label">Username</label>
+                        <input type="text" id="id_username" name="username" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="id_password" class="form-label">Password</label>
+                        <input type="password" id="id_password" name="password" class="form-control" required>
+                    </div>
+
+                    {% if request.GET.next %}
+                        <input type="hidden" name="next" value="{{ request.GET.next }}">
+                    {% endif %}
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </div>
+                </form>
+
+                <div class="text-center mt-3">
+                    <p>Don't have an account? <a href="{% url 'users:register' %}" class="sign">Sign up here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

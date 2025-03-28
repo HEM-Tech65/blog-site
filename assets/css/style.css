@@ -1,0 +1,206 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: #f9f9f9;
+    color: #222;
+    animation: fadeIn 0.5s ease-in-out;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: #44B78B;
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #369e78 !important;
+    text-shadow: 0px 2px 5px rgba(0, 255, 150, 0.3);
+}
+
+/* Navbar */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #0d6efd;
+    padding: 1rem;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #44B78B !important;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+button, .btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover, .btn:hover {
+    background-color: #369e78 !important;
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 255, 150, 0.3);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 5rem 1rem;
+    text-align: center;
+}
+.hero-section h1 {
+    margin-bottom: 1rem;
+}
+.hero-section p {
+    margin-bottom: 1.5rem;
+}
+
+/* Post Cards */
+.post-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 255, 150, 0.3);
+}
+
+.post-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.post-card img:hover {
+    transform: scale(1.03);
+}
+
+/* Forms */
+.form-with-validation {
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+    color: black;
+}
+
+.form-with-validation input, .form-with-validation textarea {
+    padding: 0.5rem;
+    max-width: 100%;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease-in-out;
+    border: 1px solid #ccc;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #44B78B;
+    box-shadow: 0px 0px 8px rgba(68, 183, 139, 0.6);
+}
+
+/* Scroll-to-Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #44B78B;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    border: none;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.scroll-top:hover {
+    background: #369e78;
+    transform: scale(1.1);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode nav {
+    background: #222 !important;
+}
+
+.dark-mode .card, .dark-mode .jumbotron {
+    background-color: #333 !important;
+    color: white;
+}
+
+.dark-mode footer {
+    background-color: #222 !important;
+}
+
+.dark-mode .post-card {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Dark Mode Toggle */
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #444;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    transition: background 0.3s ease-in-out;
+}
+
+#darkModeToggle:hover {
+    background: #666;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

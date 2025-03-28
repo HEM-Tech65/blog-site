@@ -1,0 +1,172 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #080808;
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Jumbotron */
+.jumbotron {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+/* Cards */
+.card {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004494;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.dark-mode .navbar {
+    background-color: #222 !important;
+}
+
+.dark-mode .card, .dark-mode .jumbotron {
+    background-color: #333 !important;
+    color: white;
+}
+
+.dark-mode footer {
+    background-color: #222 !important;
+}
+
+/* Animations */
+.animate__animated {
+    animation-duration: 1s;
+}
+
+/* Navbar Improvements */
+.navbar {
+    padding: 15px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Button Hover Effects */
+.btn {
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Dark Mode Smooth Transition */
+body, .navbar, .card, .jumbotron, footer {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Search Bar Styling */
+.form-control {
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.form-control:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 8px rgba(0, 91, 187, 0.5);
+}
+
+/* Footer Padding */
+footer {
+    padding: 20px;
+}
+
+
+/* Smooth Scrolling for Internal Links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Glowing Border for Focused Inputs */
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #44B78B;
+    box-shadow: 0px 0px 8px rgba(68, 183, 139, 0.6);
+}
+
+/* Dark Mode Styles */
+body.light-mode {
+    background: black;
+    color: #222;
+}
+
+body.light-mode nav {
+    background: #369e78;
+}
+
+/* Dark Mode Button Styling */
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: #333;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+}
+
+#darkModeToggle:hover {
+    background: #555;
+}
+
+/* Card Hover Lift Effect */
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px rgba(0, 255, 150, 0.3);
+}
+
+/* Scroll-to-Top Button */
+.scroll-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #44B78B;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.scroll-top:hover {
+    background: #369e78;
+}

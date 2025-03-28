@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}About Us - ProJon Blog{% endblock %}
+
+{% block content %}
+    <section class="container my-5">
+        <div class="card shadow-lg border-0 p-4">
+            <div class="card-body">
+                <h2 class="text-center mb-3">About ProJon Blog</h2>
+                <p class="lead text-center">A place to share ideas, thoughts, and stories that inspire.</p>
+
+                <div class="row mt-4">
+                    <div class="col-md-6">
+                        <h4><i class="fas fa-bullseye text-primary"></i> Our Mission</h4>
+                        <p>We aim to provide insightful content on various topics, bringing together a community of passionate readers and writers.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h4><i class="fas fa-users text-primary"></i> Who We Are</h4>
+                        <p>We are a team of enthusiastic programmers who love to make people's ideas, thoughts and stories about technology, lifestyle, and everything known to the public.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-4">
+                    <a href="{% url 'posts:list' %}" class="btn btn-outline-primary me-2">
+                        <i class="fas fa-book-open"></i> Read Posts
+                    </a>
+                    <a href="/" class="btn btn-primary">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
